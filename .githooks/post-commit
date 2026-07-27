@@ -1,0 +1,21 @@
+#!/bin/sh
+set -e
+
+repo_root=$(git rev-parse --show-toplevel 2>/dev/null || true)
+if [ -z "$repo_root" ]; then
+  exit 0
+fi
+
+cd "$repo_root"
+
+# Skip if there are no tracked changes to commit.
+if [ -z "$(git status --porcelain)" ]; then
+  exit 0
+fi
+
+# Create a timestamped auto-commit only for the current working tree state.
+message="chore: auto-commit $(date '+%Y-%m-%d %H:%M:%S')"
+
+git add -A
+
+git commit -m "$message" >/dev/null 2>&1 || true
