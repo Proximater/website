@@ -1,7 +1,7 @@
 # CLAUDE.md
 
 ## Project overview
-This repository contains the Proximater marketing website. It is a mostly static site built with plain HTML, CSS, and JavaScript, with no build step or package manager.
+This repository contains the Proximater marketing website. It is a mostly static site built with plain HTML, CSS, and JavaScript (jQuery plugins, no framework). Vite builds it into `dist/`, bundling the CSS and optimising images (see `build/` and the README); the source tree must keep working as a static site without the build.
 
 ## Working conventions
 - Prefer small, focused edits to existing files rather than introducing new frameworks or tooling.
@@ -18,16 +18,17 @@ This repository contains the Proximater marketing website. It is a mostly static
 - terms.html: legal/terms page
 - css/: site-wide stylesheets
 - js/: front-end scripts
-- images/, new-screenshots/, blog/: static assets
+- images/, new-screenshots/: original images (the build converts and resizes them; don't commit pre-optimised copies)
+- vite.config.js, build/: build config and the plugin that copies runtime assets and optimises images
+- _unused/: unreferenced assets, local only (gitignored)
 
 ## Editing workflow
 - Make changes directly in the relevant HTML/CSS/JS file.
-- Preview the site locally with a simple static server if needed, for example:
-  - python3 -m http.server 8000
+- Preview with `npm run dev`; check the deployable output with `npm run build && npm run preview`.
 - Verify the result in both desktop and mobile-sized views when changing layout or content.
 - If a page change should also appear in the Chinese version, apply the same update there when appropriate.
 
 ## Notes
-- There is no automated build or test pipeline for this project.
+- .github/workflows/deploy.yml builds and deploys dist/ to GitHub Pages on every push to main. There are no automated tests.
 - Keep content polished and concise, since this is a marketing site.
 - Be careful with image replacements and ensure they still fit the layout and performance expectations.
