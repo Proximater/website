@@ -2,7 +2,7 @@
 //
 // Vite bundles and minifies the local stylesheets only. Every other asset keeps its original
 // path: classic <script>s, images (including lightbox links and paths inside inline scripts),
-// php/ endpoints and og:image are copied into dist/ as-is, then images are optimised.
+// and og:image are copied into dist/ as-is, then images are optimised.
 import fs from "node:fs";
 import path from "node:path";
 import { HTML_COMMENT, findRefs, listFiles, resolveRef, stripHtmlComments } from "./asset-refs.js";

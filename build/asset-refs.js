@@ -3,7 +3,7 @@
 import fs from "node:fs";
 import path from "node:path";
 
-const EXT = "png|jpe?g|gif|webp|avif|svg|ico|mp4|webm|mov|css|js|woff2?|ttf|eot|otf|php|pdf|json|xml|txt|html";
+const EXT = "png|jpe?g|gif|webp|avif|svg|ico|mp4|webm|mov|css|js|woff2?|ttf|eot|otf|pdf|json|xml|txt|html";
 // Spaces in file names must be written as %20 in references.
 const REF_RE = new RegExp(String.raw`[\w@%~.\/+-]+\.(?:${EXT})(?![\w-])`, "gi");
 

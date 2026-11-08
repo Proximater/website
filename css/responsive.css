@@ -475,19 +475,6 @@
     margin-top: 50px;
   }
 
-  /* Hero Newsletter Form */
-  #hero-2 .newsletter-form {
-    margin-top: 30px;
-    margin-right: 10%;
-  }
-  #hero-2 .newsletter-form .form-control {
-    height: 46px;
-    font-size: 1.222rem;
-  }
-  #hero-2 .newsletter-form .btn {
-    height: 46px;
-  }
-
   /* Hero Image */
   #hero-4 .hero-img {
     margin: 0 15%;
@@ -668,28 +655,6 @@
   .press-txt p {
     margin-bottom: 30px;
     padding: 0;
-  }
-
-  /* Newsletter */
-  #newsletter-1 {
-    padding-top: 100px;
-    padding-bottom: 80px;
-  }
-  #newsletter-2 {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-
-  #newsletter-1 .newsletter-form {
-    margin: 40px 20% 0;
-  }
-
-  .newsletter-section .newsletter-form .form-control {
-    height: 54px;
-    font-size: 1.15rem;
-  }
-  .newsletter-section .newsletter-form .btn {
-    height: 54px;
   }
 
   /* Blog */
@@ -1431,19 +1396,6 @@
     margin-top: 50px;
   }
 
-  /* Hero Newsletter Form */
-  #hero-2 .newsletter-form {
-    margin-top: 25px;
-    margin-right: 0;
-  }
-  #hero-2 .newsletter-form .form-control {
-    height: 42px;
-    font-size: 1.222rem;
-  }
-  #hero-2 .newsletter-form .btn {
-    height: 42px;
-  }
-
   /* Hero Image */
   .hero-3-img {
     bottom: 2%;
@@ -1785,36 +1737,6 @@
   }
   .press-txt.m-top-20 {
     margin-top: 0;
-  }
-
-  /* Newsletter */
-  #newsletter-1 {
-    padding-top: 80px;
-    padding-bottom: 60px;
-  }
-  #newsletter-2 {
-    padding-top: 80px;
-    padding-bottom: 60px;
-    text-align: center;
-  }
-
-  #newsletter-2 h3 {
-    padding: 0 15%;
-  }
-
-  #newsletter-1 .newsletter-form {
-    margin: 30px 15% 0;
-  }
-  #newsletter-2 .newsletter-form {
-    margin: 30px 20% 0;
-  }
-
-  .newsletter-section .newsletter-form .form-control {
-    height: 54px;
-    font-size: 1.15rem;
-  }
-  .newsletter-section .newsletter-form .btn {
-    height: 54px;
   }
 
   /* Blog */
@@ -2831,27 +2753,6 @@
     margin-bottom: 10px;
   }
 
-  /* Hero Newsletter Form */
-  #hero-2 .newsletter-form {
-    margin-top: 20px;
-    margin-right: 0;
-  }
-  #hero-2 .newsletter-form .form-control {
-    height: 44px;
-    font-size: 1.222rem;
-    border: 1px solid #ddd;
-    border-right: none;
-  }
-  #hero-2 .newsletter-form .form-control:focus {
-    border: 1px solid #ddd;
-    border-right: none;
-  }
-  #hero-2 .newsletter-form .btn {
-    height: 44px;
-    border: 1px solid #ddd;
-    border-left: none;
-  }
-
   /* Hero Image */
   #hero-1 .hero-img,
   #hero-5 .hero-img,
@@ -3250,36 +3151,6 @@
   }
   .press-txt.m-top-20 {
     margin-top: 0;
-  }
-
-  /* Newsletter */
-  #newsletter-1 {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-  #newsletter-2 {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    text-align: center;
-  }
-
-  #newsletter-2 h3 {
-    padding: 0 10%;
-  }
-
-  #newsletter-1 .newsletter-form {
-    margin: 20px 5% 0;
-  }
-  #newsletter-2 .newsletter-form {
-    margin: 20px 10% 0;
-  }
-
-  .newsletter-section .newsletter-form .form-control {
-    height: 54px;
-    font-size: 1.1rem;
-  }
-  .newsletter-section .newsletter-form .btn {
-    height: 54px;
   }
 
   /* Blog */
@@ -3785,27 +3656,6 @@
     margin-top: 20px;
   }
 
-  /* Hero Newsletter Form */
-  #hero-2 .newsletter-form {
-    margin-top: 20px;
-    margin-right: 0;
-  }
-  #hero-2 .newsletter-form .form-control {
-    height: 44px;
-    font-size: 1.222rem;
-    border: 1px solid #ddd;
-    border-right: none;
-  }
-  #hero-2 .newsletter-form .form-control:focus {
-    border: 1px solid #ddd;
-    border-right: none;
-  }
-  #hero-2 .newsletter-form .btn {
-    height: 44px;
-    border: 1px solid #ddd;
-    border-left: none;
-  }
-
   /* Hero Image */
   .hero-3-img,
   .hero-11-img {
@@ -3973,25 +3823,6 @@
   #brands-1 {
     padding-top: 60px;
     padding-bottom: 30px;
-  }
-
-  /* Newsletter */
-  #newsletter-1 {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-  #newsletter-2 {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    text-align: center;
-  }
-
-  .newsletter-section .newsletter-form .form-control {
-    height: 54px;
-    font-size: 1.1rem;
-  }
-  .newsletter-section .newsletter-form .btn {
-    height: 54px;
   }
 
   /* Blog */
@@ -4526,18 +4357,6 @@
     margin-top: 0;
   }
 
-  /* Newsletter */
-  #newsletter-2 h3 {
-    padding: 0 5%;
-  }
-
-  #newsletter-1 .newsletter-form {
-    margin: 15px 5% 0;
-  }
-  #newsletter-2 .newsletter-form {
-    margin: 15px 10% 0;
-  }
-
   /* Blog */
   #search-field .btn {
     padding: 12px;
@@ -5021,18 +4840,6 @@
   }
   .press-txt.m-top-20 {
     margin-top: 0;
-  }
-
-  /* Newsletter */
-  #newsletter-2 h3 {
-    padding: 0;
-  }
-
-  #newsletter-1 .newsletter-form {
-    margin: 15px 0 0;
-  }
-  #newsletter-2 .newsletter-form {
-    margin: 15px 0 0;
   }
 
   /* Blog */
@@ -5525,18 +5332,6 @@
   }
   .press-txt.m-top-20 {
     margin-top: 0;
-  }
-
-  /* Newsletter */
-  #newsletter-2 h3 {
-    padding: 0;
-  }
-
-  #newsletter-1 .newsletter-form {
-    margin: 15px 0 0;
-  }
-  #newsletter-2 .newsletter-form {
-    margin: 15px 0 0;
   }
 
   /* Blog */

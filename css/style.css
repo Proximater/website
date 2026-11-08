@@ -1297,10 +1297,6 @@ a.store:last-child {
 /*   SECTION TITLE
 /*------------------------------------------*/
 
-.newsletter-txt h4 {
-  font-weight: 400;
-}
-
 .jersey-10-regular {
   font-family: "Jersey 10", sans-serif;
   font-weight: 400;
@@ -2305,79 +2301,6 @@ a.store:last-child {
   bottom: 0;
   width: 40%;
   left: 60%;
-}
-
-/*------------------------------------------*/
-/*    HERO NEWSLETTER FORM
-/*------------------------------------------*/
-
-#hero-2 .newsletter-form {
-  margin-top: 40px;
-  margin-right: 10%;
-}
-
-/*------------------------------------------*/
-/*    Newsletter Form Input
-/*------------------------------------------*/
-
-#hero-2 .newsletter-form .form-control {
-  height: 54px;
-  background-color: #fff;
-  border: 1px solid #eee;
-  border-right: none;
-  color: #222;
-  font-size: 1.05rem;
-  font-weight: 400;
-  padding: 0 1.4rem;
-  box-shadow: none;
-  -webkit-border-radius: 20px 0 0 20px;
-  -moz-border-radius: 20px 0 0 20px;
-  -o-border-radius: 20px 0 0 20px;
-  border-radius: 20px 0 0 20px;
-}
-
-#hero-2 .newsletter-form .form-control:focus {
-  border: 1px solid #eee;
-  border-right: none;
-  outline: 0;
-  box-shadow: none;
-}
-
-/*------------------------------------------*/
-/*    Newsletter Form Placeholder
-/*------------------------------------------*/
-
-#hero-2 .newsletter-form .form-control::-moz-placeholder {
-  color: #999;
-}
-#hero-2 .newsletter-form .form-control:-ms-input-placeholder {
-  color: #999;
-}
-#hero-2 .newsletter-form .form-control::-webkit-input-placeholder {
-  color: #999;
-}
-
-/*------------------------------------------*/
-/*    Newsletter Form Button
-/*------------------------------------------*/
-
-#hero-2 .newsletter-form .btn {
-  width: 100%;
-  height: 54px;
-  background-color: #fff;
-  border-color: #fff;
-  color: #f4c744;
-  font-size: 1.25rem;
-  margin-top: 0;
-  padding: 0 1.4rem;
-  -webkit-border-radius: 0 20px 20px 0;
-  -moz-border-radius: 0 20px 20px 0;
-  -o-border-radius: 0 20px 20px 0;
-  border-radius: 0 20px 20px 0;
-}
-
-#hero-2 .newsletter-form .btn:hover {
-  color: #444;
 }
 
 /* ==========================================================================
@@ -4017,98 +3940,6 @@ p.testimonial-autor {
 .press-txt p {
   margin-bottom: 30px;
   padding: 0 10%;
-}
-
-/* ==========================================================================
-   17.  NEWSLETTER
-   =========================================================================== */
-
-#newsletter-1 {
-  background-image: url(../images/tra-bg-1.png);
-  padding-top: 120px;
-  padding-bottom: 100px;
-}
-
-#newsletter-2 {
-  background-image: url(../images/tra-bg-2.png);
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-
-#newsletter-1 .newsletter-form {
-  margin: 50px 15% 0;
-}
-
-/*------------------------------------------*/
-/*    Newsletter Form Input
-/*------------------------------------------*/
-
-.newsletter-section .newsletter-form .form-control {
-  height: 60px;
-  background-color: transparent;
-  border: none;
-  border-bottom: 2px solid #fff;
-  color: #fff;
-  font-size: 1.35rem;
-  font-weight: 400;
-  padding: 0 0.5rem;
-  margin-right: 0;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
-  -webkit-box-shadow: 0 0;
-  -moz-box-shadow: 0 0;
-  box-shadow: 0 0;
-}
-
-.newsletter-section .newsletter-form .form-control:focus {
-  border: none;
-  border-bottom: 2px solid #fff;
-  outline: 0;
-  box-shadow: none;
-}
-
-/*------------------------------------------*/
-/*    Newsletter Form Placeholder
-/*------------------------------------------*/
-
-.newsletter-section .newsletter-form .form-control::-moz-placeholder {
-  color: #eee;
-}
-.newsletter-section .newsletter-form .form-control:-ms-input-placeholder {
-  color: #eee;
-}
-.newsletter-section .newsletter-form .form-control::-webkit-input-placeholder {
-  color: #eee;
-}
-
-/*------------------------------------------*/
-/*    Newsletter Form Button
-/*------------------------------------------*/
-
-.newsletter-section .newsletter-form .btn {
-  height: 60px;
-  background-color: transparent;
-  border: none;
-  border-bottom: 2px solid #fff;
-  font-size: 1.35rem;
-  padding: 0 1rem;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
-  -webkit-box-shadow: 0 0;
-  -moz-box-shadow: 0 0;
-  box-shadow: 0 0;
-}
-
-.newsletter-section .newsletter-form .btn:hover {
-  padding: 0 1.25rem;
-}
-
-.newsletter-section .newsletter-form .btn:hover::before {
-  opacity: 0;
 }
 
 /* ==========================================================================

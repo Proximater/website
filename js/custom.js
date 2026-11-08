@@ -486,25 +486,4 @@ $(document).ready(function () {
 
     return false
   })
-
-  /*----------------------------------------------------*/
-  /*	Newsletter Subscribe Form
-		/*----------------------------------------------------*/
-
-  $(".newsletter-form").ajaxChimp({
-    language: "cm",
-    url: "https://proximater.us14.list-manage.com/subscribe/post?u=9721bfdd37f2f515cc0e6f631&amp;id=97fc0baacd&amp;f_id=000996e1f0",
-    // url: "http://dsathemes.us3.list-manage.com/subscribe/post?u=af1a6c0b23340d7b339c085b4&id=344a494a6e",
-    //http://xxx.xxx.list-manage.com/subscribe/post?u=xxx&id=xxx
-  })
-
-  $.ajaxChimp.translations.cm = {
-    submit: "Submitting...",
-    0: "Thanks! We will keep you posted with updates as they happen.",
-    1: "Please enter your email address",
-    2: "An email address must contain a single @",
-    3: "The domain portion of the email address is invalid (the portion after the @: )",
-    4: "The username portion of the email address is invalid (the portion before the @: )",
-    5: "This email address looks fake or invalid. Please enter a real email address",
-  }
 })
