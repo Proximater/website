@@ -16,13 +16,14 @@ export function* findRefs(text) {
 }
 
 // Site-relative path for a reference ("images/a.png"), or null if it points outside the site.
-// HTML and CSS resolve against their own folder; JS strings resolve against the page (site root).
+// References resolve against the referring file's folder: HTML and CSS by definition, and
+// Vite's JS bundles build asset URLs relative to themselves (new URL("x.png", import.meta.url)).
 export function resolveRef(value, fromFile) {
   let ref = value;
   try {
     ref = decodeURIComponent(value);
   } catch {}
-  const baseDir = /\.(html|css)$/i.test(fromFile) ? path.posix.dirname(fromFile) : "";
+  const baseDir = path.posix.dirname(fromFile);
   const resolved = ref.startsWith("/") ? path.posix.normalize(ref.slice(1)) : path.posix.join(baseDir, ref);
   return resolved.startsWith("..") ? null : resolved;
 }

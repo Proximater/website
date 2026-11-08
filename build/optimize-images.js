@@ -17,6 +17,23 @@ export const IMAGE_DEFAULTS = {
   exclude: [], // site-relative paths or RegExps to leave untouched
 };
 
+/** Vite plugin: optimises the images in the build output once the bundle is written. */
+export function imageOptimizer(options = {}) {
+  let outDir;
+  let logger;
+  return {
+    name: "optimize-images",
+    apply: "build",
+    configResolved(config) {
+      outDir = path.resolve(config.root, config.build.outDir);
+      logger = config.logger;
+    },
+    async closeBundle() {
+      await optimizeImages(outDir, { ...options, logger });
+    },
+  };
+}
+
 export async function optimizeImages(outDir, options = {}) {
   const { logger = console, ...rest } = options;
   const opts = { ...IMAGE_DEFAULTS, ...rest };

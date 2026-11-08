@@ -1,0 +1,102 @@
+/* ==========================================================================
+   Bridges between the theme CSS (css/) and the React components
+   =========================================================================== */
+
+/* --- Carousels ---------------------------------------------------------------
+   css/style.css was written for slick 1.6, which put its state classes (slick-current)
+   on the slide element itself. react-slick puts them on a wrapper around each slide, so
+   these rules mirror the theme's `.carousel-item.slick-current` / `.review-2.slick-current`. */
+.slick-current .carousel-item,
+.slick-current .review-1,
+.slick-current .review-2 {
+  opacity: 1;
+}
+
+.slick-current .review-2 {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+/* react-slick styles each slide's content as an inline-block; slick 1.6 slides were blocks
+   (and Bootstrap hides `.carousel-item` unless it is told otherwise). */
+.screens-carousel .carousel-item,
+.reviews-carousel .review-2 {
+  display: block !important;
+}
+
+/* With variableWidth, react-slick sizes the track as if every slide were list-width / 5 wide,
+   so the 306px screenshots wrap onto extra rows. Slick 1.6 made the track 5000px per slide;
+   do the same (below 480px the carousel fades instead and react-slick's width is right). */
+@media (min-width: 481px) {
+  .screens-carousel .slick-track {
+    width: 100000px !important;
+  }
+}
+
+/* --- Language selector (header) -------------------------------------------- */
+.lang-switch .nav-link {
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+/* Focus returns to the button when the menu closes; only show it for keyboard users. */
+.navbar .lang-switch .nav-link:focus:not(:focus-visible):not(:hover) {
+  outline: 0;
+  background-color: transparent;
+}
+
+.lang-switch .lang-icon {
+  margin-right: 0.4rem;
+}
+
+/* The theme turns any span in a nav link into a small red "new" dot; undo that here. */
+.navbar-expand-lg .navbar-nav.lang-switch .nav-link span:not(.sr-only) {
+  position: static;
+  display: inline;
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.navbar-expand-lg .navbar-nav.lang-switch .nav-link span.lang-short {
+  display: none;
+}
+
+@media (max-width: 991.98px) {
+  /* On phones narrower than ~356px the logo gives up a little width rather than pushing the
+     menu button onto a second row. 125px = logo margin + language button + gap + menu button,
+     so from 356px up the cap is wider than the logo and the header is exactly as before. */
+  .navbar-brand {
+    max-width: calc(100% - 125px);
+  }
+
+  .navbar-brand img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Sits between the logo and the menu button, so it stays compact */
+  .navbar-nav.lang-switch {
+    padding-top: 0;
+    margin-right: 0.5rem;
+  }
+
+  .navbar-expand-lg .navbar-nav.lang-switch .nav-link {
+    padding: 0.375rem 0.5rem;
+    font-size: 1rem;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+  }
+
+  .navbar-expand-lg .navbar-nav.lang-switch .nav-link span.lang-name {
+    display: none;
+  }
+
+  .navbar-expand-lg .navbar-nav.lang-switch .nav-link span.lang-short {
+    display: inline;
+  }
+}

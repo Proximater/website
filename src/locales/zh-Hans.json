@@ -1,0 +1,226 @@
+{
+  "meta": {
+    "title": "Proximater - 实时位置探索应用程序 | 商家实时广播",
+    "description": "实时位置探索应用程序，让商家即刻广播自己的存在。无需像Google地图般繁琐审批。立即找出你周围正在发生的事。",
+    "keywords": "实时地图, 实时位置, 实时探索, 商家广播, 本地活动, 附近餐厅, 现在开放, 位置应用程序, proximater, 实时地图, 实时探索"
+  },
+  "preloader": {
+    "waitIsOver": "等待结束了"
+  },
+  "lightbox": {
+    "loading": "加载中...",
+    "close": "关闭 (Esc)"
+  },
+  "lang": {
+    "label": "语言"
+  },
+  "store": {
+    "appStoreLabel": "在App Store下载Proximater",
+    "appStoreAlt": "在App Store上下载",
+    "googlePlayLabel": "在Google Play上获取Proximater",
+    "googlePlayAlt": "在Google Play上获取"
+  },
+  "nav": {
+    "toggle": "切换导航",
+    "about": "关于",
+    "aboutProximater": "关于Proximater",
+    "proximaterFeatures": "Proximater功能",
+    "whyProximater": "为何选择Proximater",
+    "feedback": "真实用户反馈",
+    "technology": "技术实力",
+    "faqs": "常见问题",
+    "features": "功能",
+    "business": "商业版",
+    "social": "社交",
+    "forBusiness": "Proximater商业版"
+  },
+  "hero": {
+    "title": "它来了，<br/><red>为了当下</red>",
+    "subtitle": "你的城市正在改变。<br/>你的地图还没有。",
+    "intro": "打开它。立即查看附近的一切。导航前往。就这么简单。",
+    "availability": "iOS和Android跨平台支持。2025年10月正式上线。目前已在<strong>英国、美国、台湾、泰国</strong>及<strong>菲律宾</strong>上线",
+    "video": "观看Proximater在真实设备上的运作…"
+  },
+  "features": {
+    "title": "所有广播均为实时，<br/><red>这是我们的设计初衷</red>",
+    "intro": "Proximater应用程序免费且易于使用。它将强大的位置功能握于掌心，同时确保你对自己的隐私拥有完整的可见性与控制权。",
+    "broadcast": {
+      "title": "广播",
+      "text": "通过先进的安全性与控制机制分享你的位置，利用有时效限制的广播让自己或商家更加显眼。"
+    },
+    "explore": {
+      "title": "探索",
+      "text": "快速直观地了解你周围正在发生的一切，且所见内容均为最新信息。"
+    },
+    "connect": {
+      "title": "连接",
+      "text": "轻松创建公开或私人广播，并可连接、分享或导航前往。"
+    },
+    "realContent": "Proximater具备确保平台内容真实且实时更新的功能。",
+    "crossPlatform": "跨平台支持，现已在iOS及Android上线"
+  },
+  "screens": {
+    "title": "强大的位置功能，尽在掌握",
+    "intro": "专为当下而生。每项功能均围绕实时探索设计——从自动到期的实时广播，到适应实时状况的导航。没有过时数据，不浪费时间。只呈现你周围此刻真正正在发生的事。",
+    "pickUp": "拿起来",
+    "play": {
+      "subtitle": "就能玩",
+      "caption": "只需打开应用程序，即可查看附近的一切！"
+    },
+    "go": {
+      "subtitle": "就能出发",
+      "caption": "前往目的地<br/><em><strong>只需一键</strong></em>"
+    },
+    "arrive": {
+      "title": "抵达",
+      "caption": "带着微笑"
+    },
+    "publish": {
+      "subtitle": "就能发布",
+      "step1": "选择广播类型",
+      "step2": "调整你的实时广播选项",
+      "step3": "当你准备好了…",
+      "step4": "让附近的人发现你"
+    },
+    "control": {
+      "title": "发布",
+      "subtitle": "掌控一切",
+      "caption": "轻松修改并分享"
+    },
+    "engagement": {
+      "title": "查看",
+      "subtitle": "互动数据",
+      "caption": "通过便捷的指标一目了然"
+    },
+    "share": {
+      "title": "分享",
+      "subtitle": "轻松无比",
+      "caption": "广而告之"
+    },
+    "navigate": {
+      "title": "导航",
+      "subtitle": "毫不费力",
+      "caption": "前往公开或私人广播位置"
+    },
+    "travelModes": {
+      "title": "导航",
+      "subtitle": "得心应手",
+      "caption": "数秒内切换交通模式"
+    },
+    "privacy": {
+      "title": "你的隐私",
+      "subtitle": "由你掌控。",
+      "caption": "轻松管理你的隐私"
+    }
+  },
+  "why": {
+    "title": "<red>为何选择</red>\u00a0Proximater？",
+    "intro": "使用Proximater探索你周围的一切，你所见的均真实存在。",
+    "points": {
+      "live": "你在Proximater上看到的均为\u00a0<red>实时</red>信息",
+      "realTime": "以\u00a0<red>实时</red>方式探索你周围的一切",
+      "secure": "它\u00a0<strong>安全可靠</strong>\u00a0——每一步Proximater都在保护你的隐私。",
+      "noNoise": "<strong>无广告干扰</strong>\u00a0——我们不支持广告，也不会打扰你。",
+      "free": "它\u00a0<strong>完全免费</strong>\u00a0——Proximater所有功能均免费使用。"
+    },
+    "keptLive": "与其他可能含有过时信息的位置或地图应用程序不同，Proximater上的内容必须由<strong>拥有者持续维护以保持实时性。</strong>"
+  },
+  "business": {
+    "title": "Proximater商业版",
+    "pitch": "还记得YouTube如何让任何拿着摄像机的人都能成为内容创作者吗？我们正在为位置服务做同样的事。Google地图让商家在更新店面信息时大费周章，Proximater却让每个商家都能实时广播自己的所在。",
+    "idea": "<strong>理念很简单：</strong>一打开前门就开始广播。你的顾客现在就在附近经过——让他们知道你的存在。",
+    "audience": "独立零售商、快闪店、市集摊位、餐车、流动服务——只要你现在正在营业，附近的人就能立刻发现你。",
+    "plan": {
+      "name": "移动应用",
+      "available": "现已在应用程序商店上线！",
+      "unlimited": "无限次免费广播",
+      "promotions": "提供到达促销优惠",
+      "audience": "触及更广泛的本地受众",
+      "price": "免费"
+    }
+  },
+  "social": {
+    "title": "社交解决方案",
+    "subtitle": "Proximater将让附近的人们相互联系。",
+    "text": "你是否曾想过，附近一定有值得认识的人，或提供某种服务的人，但在一般地图应用程序上根本找不到，因为那更像是临时性的存在？这正是Proximater的用武之地。<br/><br/>无论是社交用户还是商家，你都可以轻松创建广播，或打开Proximater查看周围的动态。<br/><br/>Proximater属于所有人，就在此时此地。<br/><br/>保护你的隐私，社交广播的搜索结果中仅分享你的大概位置。你可以根据请求分享精确位置。",
+    "comingSoon": "社交广播，<strong>即将推出！</strong>"
+  },
+  "reviews": {
+    "title": "MVP用户反馈",
+    "intro": "<strong>2024年，我们带着最小可行产品走上伦敦街头，与真实的本地商家进行测试。</strong><br/><br/>以下是独立商家主在上市前试用Proximater后的真实评语。那是过去的事了。<strong>这是现在。</strong> Proximater已正式上线，并可在iOS和Android上使用。立即下载并广播，提升你的曝光度！",
+    "giftShop": {
+      "title": "无广告干扰，毫无疑问！",
+      "quote": "「前几天有人来推广Nextdoor应用程序。我注册并发帖，但我的帖子很快淹没在无关的聊天中，之后又被大量信息轰炸，对我的业务几乎没有帮助。<br/><br/>Proximater看起来简单易用，又没有那些杂音。上线后我一定会试试，对我来说根本不需要多想。」",
+      "author": "独立礼品店"
+    },
+    "frenchToast": {
+      "title": "我喜欢促销功能",
+      "quote": "「是的，我会用。<br/><br/>我喜欢可以这么轻松地添加或移除促销活动的方式。」"
+    },
+    "kori": {
+      "title": "我喜欢地理围栏功能",
+      "quote": "在示范当用户离开所在位置时广播自动结束的功能时……<br/><br/>「所以我离开店铺后广播可以自动下架？这个想法真的很棒。」"
+    },
+    "pradThai": {
+      "title": "看起来非常专业",
+      "quote": "「什么，就这样？真的好简单」——在我们示范添加广播后。<br/><br/>「我喜欢这个设计，看起来非常专业。」"
+    },
+    "lionVibes": {
+      "title": "太简单了，广播看起来也非常专业",
+      "quote": "店主对在不到一分钟内就能创建广播感到惊讶，他们还表示自己的列表看起来非常专业。"
+    }
+  },
+  "tech": {
+    "title": "技术实力",
+    "usability": {
+      "title": "以可用性为优先",
+      "text": "不到一分钟即可创建广播<br/>打开后立即查看附近动态，点击即可导航——无复杂操作，无广告干扰<br/>完整集成的卫星导航——可用性可与Maps和Waze媲美"
+    },
+    "security": {
+      "title": "安全与隐私",
+      "text": "所有传输数据均采用SSL加密<br/>每次互动均有精细的隐私控制<br/>不出售数据，追踪仅用于私人广播，无广告"
+    },
+    "realTime": {
+      "title": "实时基础设施",
+      "text": "实时广播验证以确保真实性<br/>跨平台实时同步<br/>自动到期的内容，始终保持最新"
+    }
+  },
+  "faq": {
+    "title": "Proximater常见问题",
+    "broadcast": {
+      "question": "什么是广播？",
+      "answer": "广播本质上类似于一个商家（或社交）列表，包含一张直接从相机拍摄的照片、最多5个描述标签，以及你的位置。广播最长可持续10小时，以保持信息的新鲜度。你的位置会显示在地图上，并以卡片形式列于用户打开应用程序查看附近动态时的列表中。"
+    },
+    "account": {
+      "question": "如何创建用户账号",
+      "answer": "Proximater免费使用，因此你无需创建用户账号即可查看附近的动态！<br/><br/>如果你希望创建广播或进行导航，则需要使用Apple或Google账号登录，或使用电子邮件地址创建用户账号。"
+    },
+    "dataSecurity": {
+      "question": "你们如何保护我的敏感数据？",
+      "answer": "Proximater从创建之初便以最佳的移动应用程序信息安全实践为核心。我们凭借团队在为企业及消费者品牌交付移动应用程序方面积累的多年丰富经验，成功实现了这一目标。<br/><br/>通过努力达到ISO-27001认证标准，我们持续致力于确保安全得到妥善管理与维护。"
+    },
+    "download": {
+      "question": "如何下载Proximater？",
+      "answer": "Proximater现已可从Apple App Store和Google Play Store下载，请在页面底部找到下载链接。"
+    },
+    "privacy": {
+      "question": "Proximater如何保护我的隐私？",
+      "answer": "你可以使用Proximater分享你的位置。除了最严格的操作系统级别权限外，通过清晰的提示和嵌入式功能，你始终清楚自己的隐私状况。"
+    },
+    "responsibility": {
+      "question": "Proximater如何承担社会责任？",
+      "contentTitle": "不当内容",
+      "contentText": "我们不希望Proximater上出现可能被视为冒犯性或不适合未成年人的内容。<br/><br/>为了从上线之初便解决这个问题，我们集成了强大的OpenAI和AWS AI技术，在拦截不当内容方面表现出色。",
+      "environmentTitle": "环境保护",
+      "environmentText": "我们致力于利用最新技术寻找支持生物多样性和环境保护的具体解决方案。Proximater希望能为此贡献一份力量。"
+    }
+  },
+  "footer": {
+    "tagline": "实时位置探索。终于实现。",
+    "about": "凭借全面的跨平台工具套件，Proximater让用户能更轻松地与周围的人或商家互动。<br/><br/>我们以易用性、安全性、隐私保护和社会责任为首要议程，致力于成为全球领先的品牌，通过邻近性促成社交及B2C连接。",
+    "siteMap": "网站地图",
+    "crossPlatform": "跨平台支持",
+    "registered": "英格兰注册号 14795812",
+    "privacy": "隐私政策"
+  }
+}
