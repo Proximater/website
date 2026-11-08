@@ -1,9 +1,10 @@
 import { useTranslation } from "react-i18next";
-import social1 from "../../images/_deck/proximater-social-1.png";
-import social2 from "../../images/_deck/proximater-social-2.png";
-import social3 from "../../images/_deck/proximater-social-3.png";
+import social1 from "../../images/_deck/proximater-social-1.png?localized";
+import social2 from "../../images/_deck/proximater-social-2.png?localized";
+import social3 from "../../images/_deck/proximater-social-3.png?localized";
 import { Animated } from "../components/Animated";
 import { RichText } from "../components/RichText";
+import { useImageTranslation } from "../hooks/useImageTranslation";
 
 const SCREENSHOTS = [
   { src: social1, delay: 600 },
@@ -13,6 +14,7 @@ const SCREENSHOTS = [
 
 export function Social() {
   const { t } = useTranslation();
+  const { img } = useImageTranslation();
   return (
     <section id="social-1" className="bg-lightgrey download-section">
       <div className="bg-scroll bg-inner bg-dark division">
@@ -36,8 +38,8 @@ export function Social() {
             <div className="col-md-6">
               <div style={{ padding: 50 }}>
                 {SCREENSHOTS.map(({ src, delay }) => (
-                  <Animated key={src} className="social-item" animation="fadeInRight" delay={delay}>
-                    <img src={src} alt="screenshot" />
+                  <Animated key={src.default} className="social-item" animation="fadeInRight" delay={delay}>
+                    <img src={img(src)} alt="screenshot" />
                   </Animated>
                 ))}
               </div>

@@ -1,12 +1,15 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { imageOptimizer } from "./build/optimize-images.js";
+import { localizedImages } from "./build/localized-images.js";
 
 export default defineConfig({
   // Relative URLs, so the build works under /website/ on GitHub Pages and on a custom domain.
   base: "./",
   plugins: [
     react(),
+    // `import pic from "./pic.png?localized"` + pic.zh-Hant.png etc.: see build/localized-images.js.
+    localizedImages(),
     // See build/optimize-images.js for what each option does.
     imageOptimizer({ quality: 85, maxWidth: 2560, maxHeight: 2000 }),
   ],

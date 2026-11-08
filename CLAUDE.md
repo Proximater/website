@@ -10,6 +10,7 @@ This repository contains the Proximater marketing website: a single-page React 1
 - When updating shared styling, prefer the existing files in `css/` rather than creating duplicate styles; `src/styles/react-compat.css` is only for bridges between the theme CSS and the React components.
 - All user-facing text goes in `src/locales/<language>.json` (en, zh-Hant, zh-Hans), never hard-coded in components. Change every language when changing copy; keys are type-checked against `en.json`.
 - Import images in the component that uses them so the build can optimise them.
+- Images containing words are imported with `?localized` and rendered with `img()` from `useImageTranslation()`; translations sit beside the original as `name.<language>.ext` (e.g. `Slide8.zh-Hant.png`), keeping the original's proportions. When changing such an image, update or remove its translations too.
 
 ## File guide
 - index.html: page shell (head metadata, fonts, React root)
@@ -21,7 +22,7 @@ This repository contains the Proximater marketing website: a single-page React 1
 - css/: theme stylesheets (Bootstrap 4, style.css, responsive.css, animate.css, slick, Magnific Popup look)
 - images/, new-screenshots/: original images (the build converts and resizes them; don't commit pre-optimised copies)
 - public/: files served unchanged at the site root
-- vite.config.ts, build/: build config and the image optimiser plugin
+- vite.config.ts, build/: build config, the image optimiser plugin and the ?localized image plugin
 - _unused/: unreferenced files, local only (gitignored); the old jQuery pages and scripts are in _unused/legacy-site/
 
 ## Editing workflow

@@ -1,6 +1,7 @@
 import type { ParseKeys } from "i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import phone3 from "../../images/_phone/phone-3.png";
+import phone3 from "../../images/_phone/phone-3.png?localized";
+import { useImageTranslation } from "../hooks/useImageTranslation";
 import { Animated } from "../components/Animated";
 import { RichText } from "../components/RichText";
 import { faCheck } from "../icons";
@@ -16,13 +17,14 @@ const POINTS: ParseKeys[] = [
 
 export function WhyProximater() {
   const { t } = useTranslation();
+  const { img } = useImageTranslation();
   return (
     <section id="content-2" className="bg-scroll bg-lightgrey wide-60 content-section division">
       <div className="container">
         <div className="row d-flex align-items-center">
           <Animated className="col-md-6" animation="fadeInRight" delay={500}>
             <div className="content-img">
-              <img className="img-fluid" src={phone3} alt="content-image" />
+              <img className="img-fluid" src={img(phone3)} alt="content-image" />
             </div>
           </Animated>
           <div className="col-md-6">

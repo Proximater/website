@@ -1,11 +1,12 @@
 import type { MouseEvent } from "react";
 import { useTranslation } from "react-i18next";
-import slide8 from "../../images/_deck/Slide8.png";
-import slide9 from "../../images/_deck/Slide9.png";
-import slide10 from "../../images/_deck/Slide10.png";
+import slide8 from "../../images/_deck/Slide8.png?localized";
+import slide9 from "../../images/_deck/Slide9.png?localized";
+import slide10 from "../../images/_deck/Slide10.png?localized";
 import { Animated } from "../components/Animated";
 import { useLightbox } from "../components/Lightbox";
 import { RichText } from "../components/RichText";
+import { useImageTranslation } from "../hooks/useImageTranslation";
 
 const FEATURES = [
   {
@@ -38,6 +39,7 @@ const FEATURES = [
 export function Features() {
   const { t } = useTranslation();
   const openLightbox = useLightbox();
+  const { img } = useImageTranslation();
 
   const openImage = (e: MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
@@ -69,10 +71,10 @@ export function Features() {
                     <br key={i} />
                   ))}
                 </p>
-                <a className="image-popup" href={f.image} onClick={openImage}>
+                <a className="image-popup" href={img(f.image)} onClick={openImage}>
                   <img
                     className={f.imageClass}
-                    src={f.image}
+                    src={img(f.image)}
                     alt="content-image"
                     style={"imageStyle" in f ? f.imageStyle : undefined}
                   />

@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
-import appStoreBadge from "../../images/store_badges/appstore.png";
-import googlePlayBadge from "../../images/store_badges/googleplay.png";
+import appStoreBadge from "../../images/store_badges/appstore.png?localized";
+import googlePlayBadge from "../../images/store_badges/googleplay.png?localized";
+import { useImageTranslation } from "../hooks/useImageTranslation";
 
 export const APP_STORE_URL = "https://apps.apple.com/app/id6468129023?mt=8&ct=website";
 export const GOOGLE_PLAY_URL =
@@ -8,11 +9,12 @@ export const GOOGLE_PLAY_URL =
 
 function AppStoreLink({ imgClass, trailingSpace }: { imgClass?: string; trailingSpace?: boolean }) {
   const { t } = useTranslation();
+  const { img } = useImageTranslation();
   return (
     <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" aria-label={t("store.appStoreLabel")}>
       <img
         className={imgClass}
-        src={appStoreBadge}
+        src={img(appStoreBadge)}
         width="160"
         height="50"
         alt={t("store.appStoreAlt")}
@@ -25,11 +27,12 @@ function AppStoreLink({ imgClass, trailingSpace }: { imgClass?: string; trailing
 
 function GooglePlayLink({ imgClass }: { imgClass?: string }) {
   const { t } = useTranslation();
+  const { img } = useImageTranslation();
   return (
     <a href={GOOGLE_PLAY_URL} target="_blank" rel="noopener noreferrer" aria-label={t("store.googlePlayLabel")}>
       <img
         className={imgClass}
-        src={googlePlayBadge}
+        src={img(googlePlayBadge)}
         width="160"
         height="48"
         alt={t("store.googlePlayAlt")}

@@ -1,12 +1,13 @@
 import { useEffect, useState, type MouseEvent } from "react";
 import { useTranslation } from "react-i18next";
-import heroPic1 from "../../new-screenshots/hero-pic.png";
-import heroPic2 from "../../new-screenshots/hero-pic2.png";
-import heroPic3 from "../../new-screenshots/hero-pic3.png";
+import heroPic1 from "../../new-screenshots/hero-pic.png?localized";
+import heroPic2 from "../../new-screenshots/hero-pic2.png?localized";
+import heroPic3 from "../../new-screenshots/hero-pic3.png?localized";
 import { Animated } from "../components/Animated";
 import { useLightbox } from "../components/Lightbox";
 import { RichText } from "../components/RichText";
 import { StoreBadgesInline } from "../components/StoreBadges";
+import { useImageTranslation } from "../hooks/useImageTranslation";
 
 const HERO_IMAGES = [heroPic1, heroPic2, heroPic3];
 const VIDEO_URL = "https://player.vimeo.com/video/941916041?badge=0&autopause=0&player_id=0&app_id=58479";
@@ -23,6 +24,7 @@ function useRotatingIndex(count: number, intervalMs: number) {
 
 export function Hero() {
   const { t } = useTranslation();
+  const { img } = useImageTranslation();
   const openLightbox = useLightbox();
   const activeImage = useRotatingIndex(HERO_IMAGES.length, 4000);
 
@@ -69,9 +71,9 @@ export function Hero() {
           <Animated className="col-md-5 col-lg-4 offset-lg-2" animation="fadeInRight" delay={500}>
             <div className="hero-img img-fluid">
               <div className="hero-img-container">
-                {HERO_IMAGES.map((src, i) => (
-                  <div key={src} className={`hero-img-layer${i === activeImage ? " active" : ""}`} data-index={i}>
-                    <img className="img-fluid" src={src} alt={`hero-image-${i + 1}`} />
+                {HERO_IMAGES.map((image, i) => (
+                  <div key={image.default} className={`hero-img-layer${i === activeImage ? " active" : ""}`} data-index={i}>
+                    <img className="img-fluid" src={img(image)} alt={`hero-image-${i + 1}`} />
                   </div>
                 ))}
               </div>

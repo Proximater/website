@@ -28,6 +28,30 @@ The language comes from `?lng=` in the URL, then the visitor's last choice (reme
 
 `index_zh.html` only redirects old links to `index.html?lng=zh-Hant`.
 
+### Translated images
+
+Images with words in them can have a version per language. Put the translation next to the original, with the language code before the extension:
+
+```
+images/_deck/Slide8.png           used for English, and for any language without its own version
+images/_deck/Slide8.zh-Hant.png   Traditional Chinese
+images/_deck/Slide8.zh-Hans.png   Simplified Chinese
+```
+
+That's all: the page picks it up (the dev server too, without a restart). A file named `Slide8.zh.png` serves both Chinese scripts. The translation can be a different format (`Slide8.zh-Hant.jpg`) but should have the same proportions, since the layout reserves the original's size.
+
+In a component, import the original with `?localized` and pass it through `img()`, the image counterpart of `t()`:
+
+```tsx
+import slide from "../../images/_deck/Slide8.png?localized";
+const { img } = useImageTranslation();   // src/hooks/useImageTranslation.ts
+<img src={img(slide)} />
+```
+
+It follows i18next's current language and fallback, and switches with the language selector. The screenshots, deck slides, social images and store badges are already imported this way. The mechanism is in [build/localized-images.js](build/localized-images.js).
+
+Translated so far: the deck slides, the social images and the Google Play badge. The App Store badge and the app screenshots are still English. Apple's localised badges are at [Apple's marketing tools](https://tools.applemarketingtools.com/), and screenshots taken with the app set to 繁體中文 or 简体中文 can be dropped in under the same file names.
+
 ## Structure
 
 | Path | Purpose |
@@ -41,7 +65,7 @@ The language comes from `?lng=` in the URL, then the visitor's last choice (reme
 | `css/` | Theme stylesheets (Bootstrap 4, theme, responsive, animate.css, slick, Magnific Popup look) |
 | `images/`, `new-screenshots/` | Original images, imported by the components (optimised by the build) |
 | `public/` | Files served unchanged at the site root (favicon, Google verification, link-preview image) |
-| `vite.config.ts`, `build/` | Build configuration and the image optimiser |
+| `vite.config.ts`, `build/` | Build configuration, the image optimiser and translated-image imports |
 | `.github/workflows/deploy.yml` | Builds and deploys to GitHub Pages on every push to `main` |
 | `dist/` | Build output (not committed) |
 | `_unused/` | Files no page uses, kept locally only (not committed) |
