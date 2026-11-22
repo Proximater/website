@@ -13,8 +13,7 @@ This repository contains the Proximater marketing website: a single-page React 1
 - Images containing words are imported with `?localized` and rendered with `img()` from `useImageTranslation()`; translations sit beside the original as `name.<language>.ext` (e.g. `Slide8.zh-Hant.png`), keeping the original's proportions. When changing such an image, update or remove its translations too.
 
 ## File guide
-- index.html: page shell (head metadata, fonts, React root)
-- index_zh.html: redirect from the old Chinese page to index.html?lng=zh-Hant
+- index.html: page shell (head metadata, fonts, React root); the build copies it per language to zh-hant/ and zh-hans/ with translated head text (meta.* in the locales)
 - src/sections/: one component per page section
 - src/components/: header, language selector, preloader, carousel, lightbox, shared helpers
 - src/locales/: translations, one JSON file per language; src/i18n.ts lists the languages
@@ -22,7 +21,7 @@ This repository contains the Proximater marketing website: a single-page React 1
 - css/: theme stylesheets (Bootstrap 4, style.css, responsive.css, animate.css, slick, Magnific Popup look)
 - images/, new-screenshots/: original images (the build converts and resizes them; don't commit pre-optimised copies)
 - public/: files served unchanged at the site root
-- vite.config.ts, build/: build config, the image optimiser plugin and the ?localized image plugin
+- vite.config.ts, build/: build config (SITE_URL is the public address), the image optimiser plugin, the ?localized image plugin and the language-pages plugin
 - _unused/: unreferenced files, local only (gitignored); the old jQuery pages and scripts are in _unused/legacy-site/
 
 ## Editing workflow

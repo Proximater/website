@@ -14,13 +14,7 @@ export function LanguageSelector() {
 
   const choose = (code: LanguageCode) => {
     setAnchor(null);
-    void i18n.changeLanguage(code);
-    // Keep a ?lng= link in step, so reloading or sharing it shows the chosen language.
-    const url = new URL(window.location.href);
-    if (url.searchParams.has("lng")) {
-      url.searchParams.set("lng", code);
-      window.history.replaceState(null, "", url);
-    }
+    void i18n.changeLanguage(code); // src/i18n.ts moves the address to the language's page
   };
 
   return (

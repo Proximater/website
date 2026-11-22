@@ -2,7 +2,9 @@
   "meta": {
     "title": "Proximater - 实时位置探索应用程序 | 商家实时广播",
     "description": "实时位置探索应用程序，让商家即刻广播自己的存在。无需像Google地图般繁琐审批。立即找出你周围正在发生的事。",
-    "keywords": "实时地图, 实时位置, 实时探索, 商家广播, 本地活动, 附近餐厅, 现在开放, 位置应用程序, proximater, 实时地图, 实时探索"
+    "keywords": "实时地图, 实时位置, 实时探索, 商家广播, 本地活动, 附近餐厅, 现在开放, 位置应用程序, proximater, 实时地图, 实时探索",
+    "ogTitle": "Proximater | 你的城市正在改变。你的地图还没有。",
+    "ogDescription": "位置服务界的YouTube。当Google地图还在让你大费周章时，你已能实时广播商家的所在。现已在iOS和Android上线。"
   },
   "preloader": {
     "waitIsOver": "等待结束了"

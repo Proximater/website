@@ -20,13 +20,21 @@ src/locales/zh-Hant.json
 src/locales/zh-Hans.json
 ```
 
-The language comes from `?lng=` in the URL, then the visitor's last choice (remembered in the browser), then the browser's language: zh-TW, zh-HK and zh-MO get Traditional, other Chinese variants Simplified, everything else English. The selector is at the top right of the header.
+Each language has its own page, so you can link to it directly:
+
+| Address | Language |
+|---|---|
+| `https://proximater.com/` | English (and the default) |
+| `https://proximater.com/zh-hant/` | Traditional Chinese |
+| `https://proximater.com/zh-hans/` | Simplified Chinese |
+
+The build makes the language pages from `index.html`, with the page title, description and link-preview text (`meta` in each JSON file) in that language, so shared links preview in the right language. Every page also tells search engines about the other language versions. The mechanism is in [build/language-pages.js](build/language-pages.js); the site address it uses is `SITE_URL` in [vite.config.ts](vite.config.ts).
+
+A language page always shows its language. The root page uses `?lng=` if present, then the visitor's last choice (remembered in the browser), then the browser's language: zh-TW, zh-HK and zh-MO get Traditional, other Chinese variants Simplified, everything else English. Whatever language is shown, the address moves to that language's page (without reloading), so a copied link keeps the language. The selector is at the top right of the header.
 
 - **Edit copy** in the JSON files. Strings can use `<br/>`, `<strong>`, `<em>` and `<red>` (brand red).
 - **Keys are type-checked** against `en.json`: a missing or mistyped key fails `npm run build`.
-- **Add a language**: add `src/locales/<code>.json` with the same keys, then add it to `LANGUAGES` in [src/i18n.ts](src/i18n.ts).
-
-`index_zh.html` only redirects old links to `index.html?lng=zh-Hant`.
+- **Add a language**: add `src/locales/<code>.json` with the same keys, then add it to `LANGUAGES` in [src/i18n.ts](src/i18n.ts). Its page appears at `/<code in lower case>/`.
 
 ### Translated images
 
@@ -65,7 +73,7 @@ Translated so far: the deck slides, the social images and the Google Play badge.
 | `css/` | Theme stylesheets (Bootstrap 4, theme, responsive, animate.css, slick, Magnific Popup look) |
 | `images/`, `new-screenshots/` | Original images, imported by the components (optimised by the build) |
 | `public/` | Files served unchanged at the site root (favicon, Google verification, link-preview image) |
-| `vite.config.ts`, `build/` | Build configuration, the image optimiser and translated-image imports |
+| `vite.config.ts`, `build/` | Build configuration, the image optimiser, translated-image imports and the language pages |
 | `.github/workflows/deploy.yml` | Builds and deploys to GitHub Pages on every push to `main` |
 | `dist/` | Build output (not committed) |
 | `_unused/` | Files no page uses, kept locally only (not committed) |

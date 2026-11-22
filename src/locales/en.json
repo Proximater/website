@@ -2,7 +2,9 @@
   "meta": {
     "title": "Proximater - Real-Time Location Discovery App | Live Business Broadcasting",
     "description": "Real-time location discovery app that lets businesses broadcast their presence instantly. No bureaucratic approvals like Google Maps. Find what's actually happening around you right now.",
-    "keywords": "real time maps, live location, instant discovery, business broadcast, local events, nearby restaurants, what's open now, location app, proximater, live maps, real-time discovery"
+    "keywords": "real time maps, live location, instant discovery, business broadcast, local events, nearby restaurants, what's open now, location app, proximater, live maps, real-time discovery",
+    "ogTitle": "Proximater | Your city is changing right now. Your map isn't.",
+    "ogDescription": "The YouTube for location services. Broadcast your business presence in real-time while Google Maps makes you jump through hoops. Available now on iOS & Android."
   },
   "preloader": {
     "waitIsOver": "THE WAIT IS OVER"
