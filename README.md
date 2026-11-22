@@ -58,7 +58,7 @@ const { img } = useImageTranslation();   // src/hooks/useImageTranslation.ts
 
 It follows i18next's current language and fallback, and switches with the language selector. The screenshots, deck slides, social images and store badges are already imported this way. The mechanism is in [build/localized-images.js](build/localized-images.js).
 
-Translated so far: the deck slides, the social images and the Google Play badge. The App Store badge and the app screenshots are still English. Apple's localised badges are at [Apple's marketing tools](https://tools.applemarketingtools.com/), and screenshots taken with the app set to 繁體中文 or 简体中文 can be dropped in under the same file names.
+Translated so far: the deck slides, the social images, the Google Play badge and the link-preview image (`public/images/website.zh-Hant.jpg` etc., 1200×630 screenshots of each language's hero; picked per language page by [build/language-pages.js](build/language-pages.js)). The App Store badge and the app screenshots are still English. Apple's localised badges are at [Apple's marketing tools](https://tools.applemarketingtools.com/), and screenshots taken with the app set to 繁體中文 or 简体中文 can be dropped in under the same file names.
 
 ## Structure
 

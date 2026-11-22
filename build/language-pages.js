@@ -11,10 +11,12 @@
 // and description) taken from the language's "meta" strings, so link previews and search engines
 // see the right language without running the app. Every page also links to all the language
 // versions (hreflang), names its own address as canonical, and uses an absolute link-preview image.
+// The preview image (og:image, in public/) can have a version per language beside it, named like
+// translated images: images/website.jpg -> images/website.zh-Hant.jpg.
 //
 // The language pages are not files in the repo: the build generates them, and the dev server
 // serves them at /zh-hant/ and /zh-hans/.
-import { readFileSync, readdirSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { basename, join, resolve } from "node:path";
 
 const DEFAULT_LANGUAGE = "en";
@@ -52,7 +54,15 @@ const fromSubfolder = (html) =>
 export function languagePages({ siteUrl, localesDir = "src/locales" }) {
   if (!siteUrl.endsWith("/")) throw new Error("language-pages: siteUrl must end with /");
   let root = process.cwd();
+  let publicDir = join(root, "public");
   let languages = [];
+
+  /** The language's own version of a public file if there is one (images/website.zh-Hant.jpg). */
+  const translatedPublicFile = (path, lang) => {
+    const dot = path.lastIndexOf(".");
+    const translated = `${path.slice(0, dot)}.${lang.code}${path.slice(dot)}`;
+    return dot > 0 && existsSync(join(publicDir, translated)) ? translated : path;
+  };
   const pageId = (lang) => join(root, lang.folder, "index.html");
   const subPages = () => languages.filter((l) => l.folder !== "");
 
@@ -73,7 +83,7 @@ export function languagePages({ siteUrl, localesDir = "src/locales" }) {
     html = setMeta(html, "property", "og:description", meta.ogDescription);
     // Crawlers need the preview image's full address; index.html gives it from the site root.
     html = html.replace(/(<meta\b[^>]*\bproperty="og:image"[^>]*?\bcontent=")\/?([^"]*)"/, (_, start, path) =>
-      /^[a-z]+:/i.test(path) ? `${start}${path}"` : `${start}${siteUrl}${path}"`,
+      /^[a-z]+:/i.test(path) ? `${start}${path}"` : `${start}${siteUrl}${translatedPublicFile(path, lang)}"`,
     );
     const links = [
       `<link rel="canonical" href="${pageUrl}" />`,
@@ -91,6 +101,7 @@ export function languagePages({ siteUrl, localesDir = "src/locales" }) {
 
     config(config) {
       root = resolve(config.root ?? process.cwd());
+      publicDir = resolve(root, typeof config.publicDir === "string" ? config.publicDir : "public");
       languages = readLanguages(resolve(root, localesDir));
       // Added to the build's pages alongside index.html (vite.config.ts).
       return { build: { rolldownOptions: { input: subPages().map(pageId) } } };

@@ -39,7 +39,7 @@ export async function optimizeImages(outDir, options = {}) {
   const opts = { ...IMAGE_DEFAULTS, ...rest };
   const files = listFiles(outDir);
   const texts = files.filter((f) => /\.(html|css|js)$/i.test(f));
-  const previewImages = findPreviewImages(outDir, texts);
+  const previewImages = findPreviewImages(outDir, texts, files);
   const taken = new Set(files);
   const renames = new Map();
   const report = [];
@@ -108,16 +108,22 @@ async function toWebp(input, opts) {
 }
 
 // Crawlers don't all accept WebP, so og:image / twitter:image files keep their format.
-function findPreviewImages(outDir, texts) {
+function findPreviewImages(outDir, texts, files) {
   const found = new Set();
+  const fullAddressPaths = [];
   for (const file of texts.filter((f) => f.endsWith(".html"))) {
     const html = fs.readFileSync(path.join(outDir, file), "utf8");
     for (const [tag] of html.matchAll(/<meta\b[^>]*>/gi)) {
       if (!/(?:property|name)\s*=\s*["'](?:og|twitter):image/i.test(tag)) continue;
       const content = /content\s*=\s*["']([^"']+)["']/i.exec(tag)?.[1];
-      if (content && !/^[a-z]+:|^\/\//i.test(content)) found.add(resolveRef(content, file));
+      if (!content) continue;
+      if (/^[a-z]+:|^\/\//i.test(content)) fullAddressPaths.push(decodeURIComponent(new URL(content, "https://x").pathname));
+      else found.add(resolveRef(content, file));
     }
   }
+  // A full address (https://site/images/website.jpg, as build/language-pages.js writes) is the
+  // output file its path ends with, wherever the site root is.
+  for (const file of files) if (fullAddressPaths.some((p) => p.endsWith("/" + file))) found.add(file);
   return found;
 }
 
